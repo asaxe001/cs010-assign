@@ -20,10 +20,10 @@
 #include <iostream>
 using namespace std;
 
-int x,y,add,mul,div,mod;
 
 int main()
 {
+    int x,y,add,mul,div,mod;
     // Take input from the user
     cout << "Enter the first integer: ";
     cin >> x;

@@ -20,12 +20,13 @@
 #include <iostream>
 using namespace std;
 // Declare the variables for the input
-double x,y,z,a,b,c,sum,avg;
+
 
 int main()
 {
+    double x,y,z,a,b,c,sum,avg;
     // Take user input
-    cout << "Enter six numbers with precision: ";
+    cout << "Enter six fp numbers on a single line, separated by spaces: ";
     cin >> x >> y >> z >> a >> b >> c;
     
     // Perform mathematical operations
@@ -33,8 +34,9 @@ int main()
     avg = sum/6;
     
     // Display results
-    cout << "\nSum of numbers: " << sum << endl;
-    cout << "Avg of numbers: " << avg << endl;
+    cout << "\nSum of " << x << " + " << y << " + " << z << " + " << a 
+        << " + " << b << " + " << c << " = " << sum << endl;
+    cout << "Average = " << avg << endl;
     
     
     

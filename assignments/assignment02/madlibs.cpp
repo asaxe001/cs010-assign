@@ -19,47 +19,50 @@
 
 #include <iostream>
 using namespace std;
-// create a string variable consisting of 80 dashes
-string measuringStick(80, '-');
-
-// create string variables for all the elements of the story.
-string eagleAdj1="UN-DEFINED";
-string eagleAdj2="UN-DEFINED";
-string animalThatIsWise="UN-DEFINED";
-string treeAdj="UN-DEFINED";
-string nestAdj="UN-DEFINED";
-string someDrink="UN-DEFINED";
-string colorColor="UN-DEFINED";
-string speechAdv="UN-DEFINED";
-string companionAdj="UN-DEFINED";
-string giantAdj="UN-DEFINED";
-string mealTime="UN-DEFINED";
-string dragonAdj="UN-DEFINED";
-string visitorsAdj="UN-DEFINED";
-string burstAdj="UN-DEFINED";
-string flamesAdj="UN-DEFINED";
-string treasure1Noun="UN-DEFINED";
-string treasure2Noun="UN-DEFINED";
-string adventureAdj="UN-DEFINED";
-string oceanAdj="UN-DEFINED";
-string islandAdj="UN-DEFINED";
-string animalType="UN-DEFINED";
-string starsAdj="UN-DEFINED";
-string foodOne="UN-DEFINED";
-string foodTwo="UN-DEFINED";
-string desert="UN-DEFINED";
-string placeOne="UN-DEFINED";
-string placeTwo="UN-DEFINED";
-string windAdj1="UN-DEFINED";
-string windAdj2="UN-DEFINED";
-string number="UN-DEFINED";
-string relatives="UN-DEFINED";
-string homeVerb="UN-DEFINED";
-string monsters="UN-DEFINED";
 
 
 int main()
 {
+
+
+    // create a string variable consisting of 80 dashes
+    string measuringStick(80, '-');
+
+    // create string variables for all the elements of the story.
+    string eagleAdj1="UN-DEFINED";
+    string eagleAdj2="UN-DEFINED";
+    string animalThatIsWise="UN-DEFINED";
+    string treeAdj="UN-DEFINED";
+    string nestAdj="UN-DEFINED";
+    string someDrink="UN-DEFINED";
+    string colorColor="UN-DEFINED";
+    string speechAdv="UN-DEFINED";
+    string companionAdj="UN-DEFINED";
+    string giantAdj="UN-DEFINED";
+    string mealTime="UN-DEFINED";
+    string dragonAdj="UN-DEFINED";
+    string visitorsAdj="UN-DEFINED";
+    string burstAdj="UN-DEFINED";
+    string flamesAdj="UN-DEFINED";
+    string treasure1Noun="UN-DEFINED";
+    string treasure2Noun="UN-DEFINED";
+    string adventureAdj="UN-DEFINED";
+    string oceanAdj="UN-DEFINED";
+    string islandAdj="UN-DEFINED";
+    string animalType="UN-DEFINED";
+    string starsAdj="UN-DEFINED";
+    string foodOne="UN-DEFINED";
+    string foodTwo="UN-DEFINED";
+    string desert="UN-DEFINED";
+    string placeOne="UN-DEFINED";
+    string placeTwo="UN-DEFINED";
+    string windAdj1="UN-DEFINED";
+    string windAdj2="UN-DEFINED";
+    string number="UN-DEFINED";
+    string relatives="UN-DEFINED";
+    string homeVerb="UN-DEFINED";
+    string monsters="UN-DEFINED";
+
     
     // Explain the use of script to the user
     cout << "Please enter the following things separated by spaces or "
@@ -84,8 +87,8 @@ int main()
     cin >> homeVerb;
     cout << "----</>----\n" << endl;
     
-    cout << "A color, 2 animals, 2 places, a number, a plural for relatives,"
-        << " and plural monsters:\n";
+    cout << "A color, 2 animals, 2 places, a number,\n"
+        << "and a plural for relatives," << " and plural monsters:\n";
     cin >> colorColor >> animalThatIsWise >> animalType >> placeOne >> placeTwo
         >> number >> relatives >> monsters;
     cout << "----</random>----\n" << endl;
@@ -101,7 +104,7 @@ int main()
 
 
 
-    // Output the measuring stick of 80 "="
+    // Output the measuring stick of 80 "-"
     cout << endl << measuringStick << endl;
     
     
@@ -117,11 +120,12 @@ int main()
         << "He crawled into the eagle’s" << endl
         
         << nestAdj << " nest and said, \"That was a long climb. I’m thirsty."
-        << " May I have a cup" << endl
+        << " May Ihaveacup" << endl
         
         << "of " << someDrink << "?\"" << endl;
     cout << endl;
     
+
     
     // Second Paragraph
     cout << "As the two friends watched the sun set over the "
@@ -139,6 +143,7 @@ int main()
         << "for a snack.\"" << endl;
     cout << endl;
     
+ 
     
     // Third Paragraph
     cout << "Sharpbeak promised he would avoid the giants. "
@@ -151,7 +156,7 @@ int main()
         << "them, they may blast you" << endl
         
         << "with a " << burstAdj << " burst of their " << flamesAdj
-        << " flames. And definitely don’t disturb" << endl
+        << " flames. Anddefinitelydon’tdisturb" << endl
         
         << "their treasure of " << treasure1Noun << " and " << treasure2Noun
         << ".\"" << endl;
@@ -163,7 +168,7 @@ int main()
         << "when I go on my" << endl
         
         << adventureAdj << " adventure.\" \"Oh,\" added Sharpbeak’s friend, "
-        << "\"I wouldn’t advise you" << endl
+        << "\"Iwouldn’tadviseyou" << endl
         
         << "to fly over the " << oceanAdj << " ocean either. What if you "
         << "flew as far as you could," << endl
@@ -181,7 +186,7 @@ int main()
         << " to walk safely across a stormy lake" << endl
         
         << "without sinking.\"" << endl;
-        cout << endl;
+    cout << endl;
     
     
     // Fifth Paragraph
@@ -214,7 +219,7 @@ int main()
         
         << "your journey, I will stay home and " << homeVerb << ".\"" << endl;
     cout << endl;
-    
+
     
     // Sixth Paragraph
     cout << "The two friends gave each other a big hug. "

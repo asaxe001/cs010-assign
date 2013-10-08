@@ -20,11 +20,19 @@
 #include <iostream>
 using namespace std;
 
+
+
 int main()
 {
+    double age,lowHeart,highHeart;
+    cout << "What is your age? ";
+    cin >> age;
+    lowHeart = 0.60 * (220-age);
+    highHeart = 0.75 * (220-age);
+    cout << "\nYour target heart rate is between " << lowHeart << " and "
+       << highHeart << " bpm.";
 
 
 
-
-	return 0;
+    return 0;
 }
