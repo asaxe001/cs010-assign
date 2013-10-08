@@ -20,7 +20,7 @@
 #include <iostream>
 using namespace std;
 // create a string variable consisting of 80 dashes
-string measuringStick(80, '=');
+string measuringStick(80, '-');
 
 // create string variables for all the elements of the story.
 string eagleAdj1="UN-DEFINED";
