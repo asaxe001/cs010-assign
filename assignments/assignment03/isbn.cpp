@@ -16,28 +16,29 @@
 /// I hereby certify that the code in this file
 /// is ENTIRELY my own original work.
 //  ================== END ASSESSMENT HEADER ===============
-
 #include <iostream>
-#include <cmath>
 using namespace std;
-
 int main()
 {
-    string isbn;
-    int checksum,x[9];
+    int isbn,checksum,weightedsum=0,x[9],count=9;
     cout << "Please enter the first 9 digits of the ISBN: ";
     cin >> isbn;
     cout << endl;
-
-    // cout << "x0 " << isbn[0] << endl;
-    // cout << "x1 " << isbn[1] << endl;
-    // cout << "x2 " << isbn[2] << endl;
-
-    checksum = isbn[0] + isbn[1]*2 + isbn[2]*3 + isbn[3]*4 + isbn[4]*5;
-    checksum = checksum + isbn[5]*6 + isbn[6]*7 + isbn[7]*8 + isbn[8]*9;
-    checksum = checksum % 10;
-    
-    cout << "Checksum: " << checksum;
-
+    x[1] = (isbn / 100000000) % 10;
+    x[2] = (isbn / 10000000) % 10;
+    x[3] = (isbn / 1000000) % 10;
+    x[4] = (isbn / 100000) % 10;
+    x[5] = (isbn / 10000) % 10;
+    x[6] = (isbn / 1000) % 10;
+    x[7] = (isbn / 100) % 10;
+    x[8] = (isbn / 10) % 10;
+    x[9] = (isbn / 1) % 10;
+    while(count>0)
+    {
+        weightedsum = weightedsum + x[count]*count;
+        --count;
+    }
+    checksum = weightedsum % 11;
+    cout << "Checksum: " << checksum << endl;
     return 0;
 }

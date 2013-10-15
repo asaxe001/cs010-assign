@@ -63,7 +63,7 @@ int main()
    }
    else if ( ex == 2 )
    {
-     // All Exercise 2 code 
+      // All Exercise 2 code 
       cout << "Enter a character: ";
       cin >> character;
       cout << endl;
