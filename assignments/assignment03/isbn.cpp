@@ -23,10 +23,21 @@ using namespace std;
 
 int main()
 {
+    string isbn;
+    int checksum,x[9];
+    cout << "Please enter the first 9 digits of the ISBN: ";
+    cin >> isbn;
+    cout << endl;
 
+    // cout << "x0 " << isbn[0] << endl;
+    // cout << "x1 " << isbn[1] << endl;
+    // cout << "x2 " << isbn[2] << endl;
 
-
-
+    checksum = isbn[0] + isbn[1]*2 + isbn[2]*3 + isbn[3]*4 + isbn[4]*5;
+    checksum = checksum + isbn[5]*6 + isbn[6]*7 + isbn[7]*8 + isbn[8]*9;
+    checksum = checksum % 10;
+    
+    cout << "Checksum: " << checksum;
 
     return 0;
 }
