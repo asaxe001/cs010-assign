@@ -21,6 +21,7 @@
 using namespace std;
 
 double numOne,numTwo,numThree;
+int operationCase=0;
 
 int main()
 {
@@ -30,55 +31,56 @@ int main()
 	cout << "Please choose an operation: ";
 	cin >>operation;
 	cout << endl;
+	op2int(operation);
 	
 	
 	
-	switch(operation)
+	switch (operationCase)
 	{
-		case "addition":
-			{
+		case 1:
+			{//<addition>
 				
-			}
+			}//</addition>
 			break;
-		case "subtraction":
-			{
+		case 2:
+			{//<subtracion>
 				
-			}
+			}//</subtraction>
 			break;
-		case "division":
-			{
+		case 3:
+			{//<division>
 				
-			}
+			}//</division>
 			break;
-		case "multiplication":
-			{
+		case 4:
+			{//<multiplication>
 				
-			}
+			}//</multiplication>
 			break;
-		case "fabs":
-			{
+		case 5:
+			{//<fabs>
 				
-			}
+			}//</fabs>
 			break;
-		case "sqrt":
-			{
+		case 6:
+			{//<sqrt>
 				
-			}
+			}//</sqrt>
 			break;
-		case "quadratic":
-			{
+		case 7:
+			{//<quadratic>
 				
-			}
+			}//</quadratic>
 			break;
-		case "pythagorean":
-			{
+		case 8:
+			{//<pythagorean>
 				
-			}
+			}//</pythagorean>
 			break;
 		default:
 			{
 				
-			}
+			}//</default>
 			break;
 		
 	}//</switch(operation)>
@@ -86,42 +88,62 @@ int main()
 	
 	
 	return 0;
-}
+}//</main()>
 
-int input(int inputs);
+int op2int(string operation)
 {
-	bool done=fase;
+	if(operation=="addition")
+		operationCase=1;
+	if(operation=="subtraction")
+		operationCase=2;
+	if(operation=="division")
+		operationCase=3;
+	if(operation=="multiplication")
+		operationCase=4;
+	if(operation=="fabs")
+		operationCase=5;
+	if(operation=="sqrt")
+		operationCase=6;
+	if(operation=="quadratic")
+		operationCase=7;
+	if(operation=="pythagorean")
+		operationCase=8;
+	if(operation==0)
+	{
+		cout << "Error in function op2int()" << endl;
+		return 1;
+	}
 	
-	while(!done)
-	{
-	switch (inputs)
-	{
-		case 1:
-			{
-				cout << "Enter your first number: "
-				cin >> numOne;
-				cout << endl;
-				done=true;
-			}
-			break;
-		 case 2:
-		 	{
-		 		
-		 	}
-		 	break;
-		 case 3:
-		 	{
-		 		
-		 	}
-		 	break;
-		 default:
-		 	{
-		 		cout << "Error in function input()" << endl;
-		 		done=true;
-		 	}
-		 	break;
-	}//</switch(inputs)>
-	}//</while(done)>
 	
 	return 0;
 }
+
+int input(int inputs)
+{
+	if(inputs==1||inputs==2||inputs==3)
+	{
+		cout << "Enter your first number: ";
+		cin >> numOne;
+		cout << endl;
+	}
+	if(inputs==2||inputs==3)
+	{
+		cout << "Enter your second number: ";
+		cin >> numTwo;
+		cout << endl;
+	}
+	if(inputs==3)
+	{
+		cout << "Enter your third number: ";
+		cin >> numThree;
+		cout << endl;
+	}
+	if(!(inputs==1||inputs==2||inputs==3))
+	{
+		cout << "Error in function input()" << endl;
+		return 1;
+	}
+	
+	
+	return 0;
+}//</input()>
