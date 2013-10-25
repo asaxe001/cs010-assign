@@ -23,30 +23,29 @@
 #include <cstdlib>
 using namespace std;
 
-double numOne,numTwo,numThree;
-int operationCase=0;
 
 int error(int value)
 {
+    cout << "Error: ";
     switch (value)
     {
         case 0:
         {//<divBy0>
             cout << "Cannot divide by zero." << endl;
-            exit(1);
+            return 1;
         }//</divBy0>
         break;
         case -1:
         {//<negative>
             cout << "Cannot take square root of a negative number."
                 << endl;
-            exit(1);
+            return 1;
         }//</negative>
         break;
         case 1:
         {//<notSupported>
-            cout << "Operation not supported" << endl;
-            exit(1);
+            cout << "Operation not supported." << endl;
+            return 1;
         }//</notSupported>
         break;
         default:
@@ -60,50 +59,56 @@ int error(int value)
 
 int op2int(string operation)
 {
+    int operationCase=0;
     if(operation=="addition")
         operationCase=1;
-    if(operation=="subtraction")
+    else if(operation=="subtraction")
         operationCase=2;
-    if(operation=="division")
+    else if(operation=="division")
         operationCase=3;
-    if(operation=="multiplication")
+    else if(operation=="multiplication")
         operationCase=4;
-    if(operation=="fabs")
+    else if(operation=="fabs")
         operationCase=5;
-    if(operation=="sqrt")
+    else if(operation=="sqrt")
         operationCase=6;
-    if(operation=="quadratic")
+    else if(operation=="quadratic")
         operationCase=7;
-    if(operation=="pythagorean")
+    else if(operation=="pythagorean")
         operationCase=8;
-    if(!(operationCase>=1 && operationCase<=8))
+    else
         error(1);
     
     
-    return 0;
+    return operationCase;
 }
 
-int input(int inputs)
+double input(int inputs)
 {
-    if(inputs==1||inputs==2||inputs==3)
+    float numOne=0.0,numTwo=0.0,numThree=0.0;
+
+    if(inputs==1)
     {
         cout << "Enter your first number: ";
         cin >> numOne;
         cout << endl;
+        return numOne;
     }
-    if(inputs==2||inputs==3)
+    else if(inputs==2)
     {
         cout << "Enter your second number: ";
         cin >> numTwo;
         cout << endl;
+        return numTwo;
     }
-    if(inputs==3)
+    else if(inputs==3)
     {
         cout << "Enter your third number: ";
         cin >> numThree;
         cout << endl;
+        return numThree;
     }
-    if(!(inputs==1||inputs==2||inputs==3))
+    else if(!(inputs==1||inputs==2||inputs==3))
     {
         cout << "Error in function input()" << endl;
         return 1;
@@ -115,9 +120,12 @@ int main()
 {
     string operation="0";
     double answer,answer2,discriminate;
+    float numOne,numTwo,numThree;
+
     
 
     // // test the function w/out user input
+
     // operation="pythagorean";
     // numOne=-24;
     // numTwo=0;
@@ -130,15 +138,15 @@ int main()
     cout << "Please choose an operation: ";
     cin >>operation;
     cout << endl;
-    op2int(operation);
     
     
     
-    switch (operationCase)
+    switch (op2int(operation))
     {
         case 1:
         {//<addition>
-            input(2);
+            numOne = input(1);
+            numTwo = input(2);
             answer = numOne + numTwo;
             cout << "Equation: " << numOne << " + " << numTwo << endl;
             cout << "Result: " << answer << endl;
@@ -146,7 +154,8 @@ int main()
         break;
         case 2:
         {//<subtraction>
-            input(2);
+            numOne = input(1);
+            numTwo = input(2);
             answer = numOne - numTwo;
             cout << "Equation: " << numOne << " - " << numTwo << endl;
             cout << "Result: " << answer << endl;
@@ -154,17 +163,24 @@ int main()
         break;
         case 3:
         {//<division>
-            input(2);
-            if(numTwo==0)
-                error(0);
-            answer = numOne / numTwo;
+            numOne = input(1);
+            numTwo = input(2);
             cout << "Equation: " << numOne << " / " << numTwo << endl;
-            cout << "Result: " << answer << endl;
+            if(numTwo==0)
+            {
+                error(0);
+            }
+            else
+            {
+                answer = numOne / numTwo;
+                cout << "Result: " << answer << endl;
+            }
         }//</division>
         break;
         case 4:
         {//<multiplication>
-            input(2);
+            numOne = input(1);
+            numTwo = input(2);
             answer = numOne * numTwo;
             cout << "Equation: " << numOne << " * " << numTwo << endl;
             cout << "Result: " << answer << endl;
@@ -172,7 +188,7 @@ int main()
         break;
         case 5:
         {//<fabs>
-            input(1);
+            numOne = input(1);
             answer = fabs(numOne);
             cout << "Equation: fabs(" << numOne << ")" << endl;
             cout << "Result: " << answer << endl;
@@ -180,32 +196,50 @@ int main()
         break;
         case 6:
         {//<sqrt>
-            input(1);
-            if(numOne<0)
-                error(-1);
-            answer = sqrt(numOne);
+            numOne = input(1);
             cout << "Equation: sqrt(" << numOne << ")" << endl;
-            cout << "Result: " << answer;
+            if(numOne<0)
+            {
+                error(-1);
+            }
+            else
+            {
+                answer = sqrt(numOne);
+                cout << "Result: " << answer << endl;
+            }
         }//</sqrt>
         break;
         case 7:
         {//<quadratic>
-            input(3);
+            numOne = input(1);
+            numTwo = input(2);
+            numThree = input(3);
             discriminate = (pow(numTwo,2) - (4*numOne * numThree));
-            if(numOne==0)
-                error(0);
-            if(discriminate<0)
-                error(-1);
-            // answer = (-numTwo + sqrt(discriminate))/(2*numOne);
-            // answer2 = (-numTwo - sqrt(discriminate))/(2*numOne);
             cout << "Equation: " << numOne << "x^2 + " << numTwo
-                << "x + " << numThree << endl;
-            cout << "Result: " << answer << ", " << answer2 << endl;
+                << "x + " << numThree << " = 0" << endl;
+            if(numOne==0)
+            {
+                error(0);
+            }
+            else if(discriminate<0)
+            {
+                error(-1);
+            }
+            else
+            {
+                answer = (-numTwo + sqrt(discriminate))/(2*numOne);
+                answer2 = (-numTwo - sqrt(discriminate))/(2*numOne);
+                if (answer2==0&&answer==0)
+                    cout << "Result: 0" << endl;
+                else
+                    cout << "Result: " << answer2 << ", " << answer << endl;
+            }
         }//</quadratic>
         break;
         case 8:
         {//<pythagorean>
-            input(2);
+            numOne = input(1);
+            numTwo = input(2);
             answer = sqrt(pow(numOne,2)+pow(numTwo,2));
             cout << "Equation: sqrt(" << numOne << "^2 + " << numTwo
                 << "^2)" << endl;
