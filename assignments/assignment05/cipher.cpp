@@ -22,8 +22,29 @@ using namespace std;
 
 int main()
 {
+    string method, map;
+    cout << "What is the method? (encryption or decryption)? ";
+    cin >> method;
+
+    if (method!="encryption" && method!="decryption");
+    {
+        cout << "Error: invalid method choice.";
+        return 1;
+    }
+
+
+    cout << "What is the translation map (type 'default' to ues default): ";
+    cin >> map;
+
+    if (map.size() != 26)
+    {
+        cout << "Error: invalid translation map size.";
+        return 1;
+    }
 
 
 
-return 0;
+
+
+    return 0;
 }
