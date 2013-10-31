@@ -26,10 +26,13 @@ int main()
     cout << "What is the method? (encryption or decryption)? ";
     cin >> method;
 
-    if (method!="encryption" && method!="decryption");
+    if ((method=="encryption") || (method=="decryption"));
     {
-        cout << "Error: invalid method choice.";
-        return 1;
+        cout << "Correct choice" << endl;
+    }
+    else
+    {
+    	cout << "Error: invalid method choice" << endl;
     }
 
 
@@ -38,7 +41,7 @@ int main()
 
     if (map.size() != 26)
     {
-        cout << "Error: invalid translation map size.";
+        cout << "Error: invalid translation map size." << endl;
         return 1;
     }
 
