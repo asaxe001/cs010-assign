@@ -1,0 +1,1 @@
+This submussion was part of assignment07 hangman.cpp.
