@@ -24,19 +24,27 @@
 #include "textadventure_picture.h"
 
 int bananas, oranges;
+void monsterRoom(int&, int&, string);
+void genieRoom(int&, int&);
+// void pictureRoom();
 
-int inventory(string item, int add, int set=42)
+/// @brief Updates the inventory
+/// @param item the item in the inventory to update
+/// @param add the ammount to item (positive or negative)
+/// @param set the value to item if value passed in
+/// @return new value of item
+int inventory(int item, int add, int set=42)
 {
-    if(item=="bananas")
-        bananas += add;
-    if(item=="oranges")
-        oranges += add;
+    item += add;
     if(set != 42)
     {
-        if(item=="bananas")
-            bananas = set;
-        if(item=="oranges")
-            oranges = set;
+        item = set;
     }
+    return item;
+}
+
+int main()
+{
+
     return 0;
 }
