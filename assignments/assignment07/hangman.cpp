@@ -31,29 +31,49 @@ void renderHangMan(int);
 
 int main()
 {
-    string phrase, unsolved, prevGuesses;
+    string phrase, unsolved, unsolvedPrev, prevGuesses;
     char guess;
     int guesses = 7;
     bool done=false;
 
     cout << "Enter phrase:";
     cin >> phrase;
-    clearScreen();
+    cout << endl;
     unsolved = setupUnsolved(phrase);
+    clearScreen();
+    output(unsolved, guesses, prevGuesses);
 
     while(!done && guesses > 0)
     {
-        output(unsolved, guesses, prevGuesses);
+        // clearScreen();
+        cout << endl << endl;
+        // output(unsolved, guesses, prevGuesses);
 
+        unsolvedPrev = unsolved;
+
+        // cout << "Enter a guess: ";
         guess = getGuess(prevGuesses);
+        cout << endl;
+        clearScreen();
         prevGuesses += guess;
-        --guesses;
+        unsolved = updateUnsolved(phrase, unsolved, guess);
 
+        if(unsolvedPrev == unsolved)
+        {
+            --guesses;
+            // unsolved
+        }
+
+
+        output(unsolved, guesses, prevGuesses);
         renderHangMan(guesses);
         done = (phrase == unsolved);
         // done = true;
     }
-
+    if(unsolved==phrase)
+        cout << "Congratulations!!";
+    else
+        cout << "You Lost!";
     return 0;
 }
 
@@ -65,7 +85,7 @@ string setupUnsolved(string phrase)
     // cout << "phrase.size(): " << phrase.size() << endl;
     // string hyphens(phrase.size(), '-');
     string hyphens = phrase;
-    for(int i = 0; i < phrase.size(); ++i)
+    for(int i = 0; i < static_cast<int>(phrase.size()); ++i)
     {
         // cout << "isalpha(phrase.at(i): " << isalpha(phrase.at(i)) << endl;
         if(isalpha(phrase[i]))
@@ -84,7 +104,16 @@ string setupUnsolved(string phrase)
 /// @return the new unsolved string with dashes replaced by new guess
 string updateUnsolved(string phrase, string unsolved, char guess)
 {    
-    return "0";
+    for(int i = 0; i <= static_cast<int>(phrase.length()); ++i)
+    {
+        string unsolvedInit = unsolved;
+        if(guess == phrase[i])
+        {
+            unsolved[i] = phrase[i];
+        }
+    }
+    return unsolved;
+    // return "0";
 }
 
 /// @brief Gets valid guess as input. 
@@ -98,25 +127,28 @@ string updateUnsolved(string phrase, string unsolved, char guess)
 char getGuess(string prevGuesses)
 {
     char guess;
-    cout << "Guess phrase: ";
+    cout << "Enter a guess: ";
     cin >> guess;
     cout << endl;
-    for(int i = 0; i < prevGuesses[i]; ++i)
+    while(!isalpha(guess) || ~prevGuesses.find(guess))
     {
-        if(guess == prevGuesses[i])
-        {
-            cout << "Already Guessed" << endl;
-            return 0;
-        }
+        cout << endl << "Invalid guess! Please re-enter a guess: ";
+        cin >> guess;
     }
+    cout << endl;
     return guess;
 }
 
 void output(string unsolved, int guesses, string prevGuesses)
 {
-    cout << "Phrase: " << unsolved << endl;
-    cout << "Number of guesses left: " << guesses << endl;
-    cout << "Previous guesses: " << prevGuesses << endl;
+    cout << "Phrase: " << unsolved << endl << endl << endl;
+    if(prevGuesses.size()==0);
+    else
+    {
+        cout << "Guessed so far: " << prevGuesses << endl;
+        cout << "Wrong guesses left: " << guesses << endl << endl << endl;
+    }
+
     return;
 }
 
