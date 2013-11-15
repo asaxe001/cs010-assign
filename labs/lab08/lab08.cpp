@@ -1,0 +1,1 @@
+Get the monsterLab function working in assingment08 textadventure for this lab
