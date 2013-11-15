@@ -26,7 +26,7 @@
 int bananas, oranges;
 void monsterRoom(int&, int&, string);
 void genieRoom(int&, int&);
-// void pictureRoom();
+void pictureRoom(); //drawPicture();
 
 /// @brief Updates the inventory
 /// @param item the item in the inventory to update
@@ -45,6 +45,29 @@ int inventory(int item, int add, int set=42)
 
 int main()
 {
+    int bananas=5, oranges=3;
+    string name, monster;
+
+    cout << "What is your name? ";
+    cin >> name;
+    cout << endl;
+
+    cout << "What is the scariest monster you can think of? ";
+    cin >> monster;
+    cout << endl;
+
+
 
     return 0;
+}
+
+/// @brief Reduces inventory to 0, and cout attacked
+/// @param bananas the number of bananas in inventory
+/// @param oranges the number of oranges in inventory
+/// @param monster the monster that attacked the player
+/// @return nothing
+void monsterRoom(int& bananas, int& oranges, string monster)
+{
+
+    return;
 }
