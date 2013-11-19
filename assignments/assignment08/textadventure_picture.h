@@ -5,6 +5,8 @@ using namespace std;
 
 const bool CLEAR_SCREEN = true;
 
+/// @brief Draws a picture
+/// @return Nothing
 void drawPicture()
 {
     cout << "        _--~~--_" << endl;

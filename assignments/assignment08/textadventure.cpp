@@ -21,12 +21,13 @@
 #include <iomanip>
 #include <ctime>
 #include <cctype>
-#include "textadventure_picture.h"
+// #include "textadventure_picture.h"
+using namespace std;
 
-int bananas, oranges;
 void monsterRoom(int&, int&, string);
 void genieRoom(int&, int&);
 void pictureRoom(); //drawPicture();
+void drawPicture();
 
 /// @brief Updates the inventory
 /// @param item the item in the inventory to update
@@ -45,6 +46,7 @@ int inventory(int item, int add, int set=42)
 
 int main()
 {
+    srand(500);
     int bananas=5, oranges=3;
     string name, monster;
 
@@ -68,6 +70,44 @@ int main()
 /// @return nothing
 void monsterRoom(int& bananas, int& oranges, string monster)
 {
+    bananas = inventory(bananas, 0, 0);
+    oranges = inventory(oranges, 0, 0);
+    cout "Watch out!!" << endl;
+    cout << monster << " attacks you and steals all of your bananas and oranges." << endl;
+}
 
+/// @brief Increases inventory items by specified amount
+/// @param bananas the number of bananas in inventory
+/// @param oranges the number of oranges in inventory
+/// @return nothing
+void genieRoom(int& bananas, int& oranges)
+{
+    bananas = inventory(bananas, 2);
+    oranges = inventory(oranges, 1);
+}
+
+/// @brief Calls the drawPicture() function
+/// @return Nothing
+void pictureRoom()
+{
+    drawPicture();
+}
+
+/// @brief Draws a picture
+/// @return Nothing
+void drawPicture()
+{
+    cout << "        _--~~--_" << endl;
+    cout << "      /~/_|  |_\\~\\" << endl;
+    cout << "     |____________|" << endl;
+    cout << "     |[][][][][][]|" << endl;
+    cout << "   __| __         |__" << endl;
+    cout << "  |  ||. |   ==   |  |" << endl;
+    cout << " (|  ||__|   ==   |  |)" << endl;
+    cout << "  |  |[] []  ==   |  |" << endl;
+    cout << "  |  |____________|  |" << endl;
+    cout << "  /__\\            /__\\" << endl;
+    cout << "   ~~              ~~ " << endl;
+    cout << endl;
     return;
 }
