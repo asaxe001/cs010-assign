@@ -1,0 +1,116 @@
+﻿CS 10 - Assignment Extra: Longest Overlap
+________________
+
+
+Collaboration Policy
+We encourage collaboration on various activities such as lab, codelab, and textbook exercises. However, no collaboration between students is allowed on the programming assignments. Please be sure to read and understand our full policy at: Full Collaboration Policy
+
+
+
+Submission Instructions
+Submit to R’Sub for testing, feedback and grading.
+
+
+Assignment Specifications
+Finding an overlapping sequence or common substring is a common problem in computational sciences. For example, given two really large sequences, finding the longest common subsequence can be utilized by compression algorithms. Or another potential task involves taking two lengthy DNA sequences and finding an overlap.
+
+
+Your Assignment
+Write a program that will discover a longest possible overlap. Your program will have a set of three words (keys) and it must find the longest possible overlap for each of these keys. Do not compare the keys directly instead after the keys are acquired, input a sequence of N words. Then compare the keys to these words. Utilize input redirection when testing (refresher below). You must track the word that provides the largest overlap and the overlap’s size; ties going to the first occurring word.
+
+
+What is an overlap?
+An overlap is the amount of letters that match between a key and comparison word. An overlap can only exist at the beginning or end of the comparison word. Case matters and punctuation does not receive special treatment as shown in the final case that results in no overlap.
+
+
+Examples (overlap is highlighted for emphasis)
+key = "feud"
+comparison words:
+
+
+	strafe
+	death
+	feudal
+	nonfeudal
+	Deaf.
+	overlaps highlighted:
+
+
+	strafe
+	death
+	feudal
+	nonfeudal
+	Deaf.
+	compressed words showing potential application (you do not implement this):
+
+
+	strafeud
+	feudeath
+	feudal
+	nonfeudal
+	Deaf.
+	length of overlap:
+
+
+	2
+	1
+	4
+	0
+	0
+	________________
+
+
+Implementation Hints & Tips
+* Don’t reinvent the wheel, use string member functions:  size() and substr()
+* Implementing functions helps you break apart, organize & shorten your code
+* We can utilize an input statement inside our conditional expression of a loop and it will keep acquiring input until end of file is reached.
+while (cin >> stringName)
+{
+        // loop body code!
+}
+
+
+Output Requirements
+Utilize the following output keywords when outputting your final results.
+   * Key
+   * Match
+      * Output "No Match" as the match when no overlap is discovered.
+   * Overlap 
+
+
+Input Redirection Refresher
+We can utilize an input file to acquire input instead of taking input through the keyboard. The input file must be in the same directory as the executable program. To take advantage of input redirection, we utilize the input redirection operator (<) within our terminal when executing our program.
+
+
+1. Create an input file, in the below example it is called input.txt
+2. Compile your program
+3. Choose how to execute
+   1. Execute with input redirection: run overlap.out < input.txt
+   2. Execute longer with input redirection: run overlap.out 10 < input.txt
+      1. You shouldn’t require more time, Overlap should complete in under a second.
+
+
+Example Run
+$ g++ overlap.cpp -o overlap.out
+$ run overlap.out < input.txt
+Key: lud
+Match: tool
+Overlap: 1
+
+
+Key: mall
+Match: all.
+Overlap: 3
+
+
+Key: war
+Match: No Match
+Overlap: 0
+$
+	
+
+Input File
+lud
+mall
+war
+This list of words includes many facets of the problem but may not test all. Armed with your with and a tool for development, you should create multiple possible scenarios to test whether your program hits the ball out of the park and executes correctly.
