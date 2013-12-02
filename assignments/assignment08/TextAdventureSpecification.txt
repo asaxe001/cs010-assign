@@ -1,0 +1,162 @@
+﻿CS 10 - Assignment 8: Text Adventure
+________________
+
+
+Collaboration Policy
+We encourage collaboration on various activities such as lab, codelab, and textbook exercises. However, no collaboration between students is allowed on the programming assignments. Please be sure to read and understand our full policy at: Full Collaboration Policy
+
+
+
+Submission Instructions
+Submit to R’Sub testing, feedback and grading.
+
+
+Assignment Specifications
+For this assignment you will write a simple text adventure game. Within this game the player will travel from room to room choosing which door to traverse through.  Once through a door the player cannot go back through the door that she came through.
+
+
+Game Specifications
+Every room in the game has 4 doors for the player to choose from, each associated with an uppercase direction: N, E, S or W. Three of the doors open up to another room, and the 4th door is an exit from the game. Of the three non-exit doors, one will send the player to a room containing a monster. Another will send the player to a room containing a genie. The third non-exit door will send the player to a room that has a picture.
+
+
+The player will begin the game holding two types of items, bananas and oranges. The player should start out with 5 bananas and 3 oranges.
+
+
+For simplicity.  There are two possible alignments of the 4 doors.  At the beginning of each turn this random alignment is decided.  For clarification on implementation we will refer to these alignments as 0 and 1.
+Alignment 0
+N: Monster
+S: Genie
+E: Picture
+W: Exit
+	Alignment 1
+N: Exit
+S: Monster
+E: Genie
+W: Picture
+	IMPORTANT: Only 1 random alignment is chosen per turn.  If the user does not enter a valid directional door choice (N/E/S/W), keep asking for a direction but DO NOT get a new random alignment value.
+
+
+
+
+________________
+
+
+Door Actions
+The game should ask the player to choose a door to step into. If the player steps into a room with the monster inside, the monster will steal all of the bananas and oranges the player is holding. If the player steps into the room with the genie inside, the genie will give the player 2 additional bananas and 1 additional orange. If the player steps into the room with the picture inside, the game should just draw the picture to the screen but no other reward is granted. Finally, if the player steps through the door to the exit, the game should end. When the game ends, give the player her combined and individual scores. The combined score is the total number of bananas and oranges the player is holding when finding the exit.
+
+
+Functions
+You must write a function for each door. When the player chooses a door in a certain direction (N/E/S/W) -- and only one of those values -- the program should call the function for the door in that direction or end the program if she chooses the door to the exit. Some of these functions will use reference variables for all or some of their parameters.
+
+
+You MUST use these function names and use the specified number and types of parameters for each function. Here is what each function must do:
+
+
+* monsterRoom: Returns nothing; takes two integers both by reference and a string by value. The function reduces the values of the variables storing the number of bananas and oranges to 0. This function should also tell the player what monster attacked them.
+
+
+* genieRoom: Returns nothing; takes two integers both by reference (number of bananas and oranges, respectively). Increase the values of the variables storing the number of bananas and oranges by the appropriate number as per the game specification. The function should also output the message telling the player what she encountered in the room and what happened.
+
+
+* pictureRoom: Takes no parameters and returns nothing. This function must output the proper announcement and draw a picture to the screen. We have provided a drawPicture function for your pictureRoom function to call; the provided function actually does the picture drawing.  Your function should also tell the player what happened.
+
+
+        The drawPicture function is HERE, you should copy and paste it prior to the pictureRoom function call then invoke it as part of the pictureRoom implementation
+
+________________
+
+
+Implementation Hints
+* You will need variables to store the number of bananas and oranges.
+* Follow every input operation by outputting a blank line utilzing a separate output operation.
+* Some of the functions will use reference variables for all or some of their parameters.
+* DO NOT use global variables
+* Before the adventure begins, ask the user for their name and the scariest monster they can think of, storing each as a string.  You will pass the monster name to the associated function when the monster attacks the player.
+
+
+
+
+Testing Specifications
+As with all games we wish them to be as unpredictable as possible.  However, when testing to verify the program is in working condition we must have a measure of predictability.  To achieve similar results to the ones shown within the input and output samples you should utilize a random seed value of 500 (srand(500);).  This is for testing purposes only!  You should maintain the unpredictability on turn-in and submit with with srand(time(0)) as the seed call.
+
+
+Test Case: Whole Game Input
+Kris
+Pinhead
+N
+a
+b
+E
+W
+W
+________________
+
+
+Test Case: Whole Game Output
+Please enter your name: Kris
+
+
+Name your scariest monster: Pinhead
+
+
+Kris, you are in a room with 4 doors.
+You are carrying 5 bananas and 3 oranges.
+
+
+Pick a door to enter by typing the direction it is in (N/E/S/W): N
+
+
+WATCH OUT!!
+Pinhead attacks you and steals all of your bananas and oranges.
+
+
+Kris, you are in a room with 4 doors.
+You are carrying 0 bananas and 0 oranges.
+
+
+Pick a door to enter by typing the direction it is in (N/E/S/W): a
+
+
+Pick a door to enter by typing the direction it is in (N/E/S/W): b
+
+
+Pick a door to enter by typing the direction it is in (N/E/S/W): E
+
+
+!!POOF!!
+A genie pops out and grants you 2 bananas and 1 orange.
+
+
+Kris, you are in a room with 4 doors.
+You are carrying 2 bananas and 1 oranges.
+
+
+Pick a door to enter by typing the direction it is in (N/E/S/W): W
+
+
+You found a picture!
+
+
+        _--~~--_
+      /~/_|  |_\~\
+     |____________|
+     |[][][][][][]|
+   __| __         |__
+  |  ||. |   ==   |  |
+ (|  ||__|   ==   |  |)
+  |  |[] []  ==   |  |
+  |  |____________|  |
+  /__\            /__\
+   ~~              ~~ 
+
+
+Kris, you are in a room with 4 doors.
+You are carrying 2 bananas and 1 oranges.
+
+
+Pick a door to enter by typing the direction it is in (N/E/S/W): W
+
+
+You found the exit!
+Your score is 3 (2 bananas and 1 oranges).
+Bye bye!!!
