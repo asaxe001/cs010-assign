@@ -21,7 +21,7 @@
 
 using namespace std;
 
-bool test(vector<string>, string&);
+bool test(vector<string>, &string);
 
 int main()
 {
@@ -42,7 +42,7 @@ int main()
 	return 0;
 }
 
-bool test(vector<string> key, string& largestMatchStr)
+bool test(vector<string> key, &string largestMatchStr)
 {
 	string input;
 	int length=0;
