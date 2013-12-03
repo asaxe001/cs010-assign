@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://en.wikipedia.org/wiki/Longest_common_substring_problem -->
+<html lang="en" dir="ltr" class="ve-not-available client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><title>Longest common substring problem - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.23wmf4">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="canonical" href="./Longest common substring problem - Wikipedia, the free encyclopedia_files/Longest common substring problem - Wikipedia, the free encyclopedia.htm">
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&only=styles&skin=vector&*">
+<style>
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.23wmf4/resources/jquery.tipsy/images/tipsy.png?2013-11-14T18:10:00Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba28561960b6f903d47015297497d129 */
+.mw-editsection{white-space:nowrap;padding-right:0.25em; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-left:-0.25em;margin-right:0.25em;color:#555} .mw-content-rtl .mw-editsection-expanded .mw-editsection-bracket:first-of-type,.mw-content-ltr .mw-editsection-expanded .mw-editsection-bracket:not(:first-of-type){margin-right:-0.25em;margin-left:0.25em;color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:542a80e9a1c6a06bda7dfcbb6858ab0f */
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.uls-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAMAAADQzfSkAAABqlBMVEX////f3/+Ov+/n5+fp6enp6eno6Ojp6enn5+ff39/q6urp6enp6enp6enq6urp6en////q6urr6+upv+rU1NTJycnR0dEaGhrp6enT4/SEuuK9vb3l5eU2ktCxsbFdXV1paWmzwc9ITFDo6OhaWlpsbGxtbW2BipSZpK/X19d2dnZ8hI2/v79PT09gZm2CgoLIyMjD0eGksL1JTVHM2+spKywnKCkcHBzAzt3I1+cxMzZxcXFkZGSvr69WW2C8vLyFjphqcXiLlZ8dHh4gISLa2trQ3/Dc3NzZ2dl7e3uioqIfHyBCRko9QEPh4eFgYGDGxsZoaGiPj4/Ly8uRm6a6yNcbGxuSnKfL2uqVn6scHR20tLR/f3+Kioq4uLienp54gIipqanA2e+71u9GSk5yeoKgoKCAgIB0dHRLS0tlZWWDg4PBwcHFxcWxvsxkanGapbCKlJ7O4fNXo9hQn9bM3/OPmaRfZWve3t6mpqbR0dG+vr6JiYnKyspPVFl1s99+fn5srdzm5ubNzc1BREh2s99xsN7S0tIxMzUiIyQ2OTt/iJFwcHBbYWc3S28lAAAAF3RSTlMACBAg7P3LiTYIX6LmmDzeAYMnDN+1MJx17ncAAAEQSURBVHheddBTb0VREIbhVduYWVuHRm3btm3bNv9zJ2v3IE36Xk3yZG4+xkMKw0BREYwJMzkcO38MY37tG6AmYN48YZFxwsbeiys6y/02rT1Wa4TxwoYgpx4adLMbfRubs9tk0cJuYK8ACv1/Xy5LLlIYS5bf2FTUUlJapptiqKwyuOfJEsjq4M3j+YBPYc02X6utTWnvQEwk6wJRNxn29Pb1D2iIg0bEJMaHYWTU6RyfABPZ5BTa7xBxxo2YzPgcPPGFRb4Ey2Qrq2vrXlRk6xampDK+a94/ODw6PjGfkp2dX1y6ZOvVNWKavsutqt6HbGZ5QCqdMUmSnlXqhY6M12CZtKcaUnhtsKz/Tc5m7AfjN0jzWIipawAAAABJRU5ErkJggg==) no-repeat scroll left center;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.png?2013-11-14T18:13:20Z) no-repeat scroll left center!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../../lib/jquery.uls/images/icon-language.svg?2013-11-14T18:13:20Z);padding-left:30px}#pt-uls a.uls-trigger{padding-left:30px}#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2013-11-14T18:13:20Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:-moz-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2013-11-14T18:13:20Z);height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}   x:-o-prefocus,body.rtl li#pt-uls{ direction:ltr}#settings-block{border-top:1px solid #C9C9C9;background:#f8f8f8;background:-webkit-gradient(linear,left top,left bottom,from(#FBFBFB),to(#F0F0F0));background:-webkit-linear-gradient(top,#FBFBFB,#F0F0F0);background:-moz-linear-gradient(top,#FBFBFB,#F0F0F0);background:-o-linear-gradient(top,#FBFBFB,#F0F0F0);background:linear-gradient(#FBFBFB,#F0F0F0);padding-left:10px;line-height:1.2em;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px}.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #AAA;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}#settings-block div.display-settings-block,#settings-block div.input-settings-block{display:inline-block;margin:8px 15px;color:#565656}#settings-block div.display-settings-block:hover,#settings-block div.input-settings-block:hover{color:#252525}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525} .ime-perime-help{display:none}.ime-checked .ime-perime-help{display:inline-block;width:20px;height:100%;position:absolute;top:0;bottom:0;right:0;opacity:0.75;padding:0;background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFdQTFRF////AAAAZmZmVVVVSUlJW1tbVVVVV1dXWFhYVVVVV1dXVlZWWFhYV1dXWFhYVlZWV1dXVlZWV1dXV1dXWFhYV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXrNxhuAAAABx0Uk5TAAEFBgcOJCkxNlVla3KDi5WrsrbJ09ny9vf9/uWqFuIAAACESURBVBjTdZDBDsIgEERHai2KUqmllfr+/zs9AFYTnMsmL7uTmZX+yVjnrPkCnU8AyXeVDJGiOJSdCLzmsAIx73ngeZKOC+AlySSA8LjrCiQjyRafmzyAleQymQ7nFcDt6NItVFQOp5Cn/dgzjlDts+vW9xs1RI7KPLNHbRRq1W4951dvPF4RAFiSul8AAAAASUVORK5CYII=) left center no-repeat;background:transparent url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.png?2013-11-14T18:13:20Z) left center no-repeat!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHdpZHRoPSIxOCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDE4IDE4LjAwMDAwMSIKICAgaWQ9IkxheWVyXzEiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+PGRjOnRpdGxlPjwvZGM6dGl0bGU+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPjxkZWZzCiAgIGlkPSJkZWZzNyIgLz4KPHBhdGgKICAgZD0ibSA5LjAwMDAwMDMsMS40OTk2NDM3IGMgLTQuMTQxNDE5MSwwIC03LjUwMDAwMDQsMy4zNTc4NjkgLTcuNTAwMDAwNCw3LjUwMDAwMTQgMCw0LjE0MjEzMDkgMy4zNTg1ODEzLDcuNTAwNzExOSA3LjUwMDAwMDQsNy41MDA3MTE5IEMgMTMuMTQyODQ0LDE2LjUwMDM1NyAxNi41LDEzLjE0MTc3NiAxNi41LDguOTk5NjQ1MSAxNi41LDQuODU3NTEyNyAxMy4xNDM1NTYsMS40OTk2NDM3IDkuMDAwMDAwMywxLjQ5OTY0MzcgeiBtIC0wLjAwMTQyLDExLjk0MzQ0MjMgYyAtMC42MTMzMDYyLDAgLTEuMDY3MDUzLC0wLjQ5MDA3NCAtMS4wNjcwNTMsLTEuMDc5ODc0IDAsLTAuNjE0MDE4IDAuNDUzNzQ2OCwtMS4wOTI2OTcgMS4wNjcwNTMsLTEuMDkyNjk3IDAuNTg5Nzk5NSwwIDEuMDY4NDc4NywwLjQ3ODY3OSAxLjA2ODQ3ODcsMS4wOTI2OTcgMCwwLjU4OTA4NyAtMC40Nzg2NzkyLDEuMDc5ODc0IC0xLjA2ODQ3ODcsMS4wNzk4NzQgeiBNIDEwLjUyMDgwOCw4LjgwNDQ3MDIgQyAxMC4wMDU4MDMsOS4yMDkwNjY4IDkuODA4NDg5Myw5LjQ2NzYzODQgOS44MDg0ODkzLDEwLjA0MzE5MSBWIDEwLjM5OTM1IEggOC4yMzc4MTk1IFYgOS45Njk4MjI2IGMgMCwtMS4wODA1ODY2IDAuMzE5ODMxLC0xLjUyMTUxMyAwLjgyMjAxNTgsLTEuOTE0NzEzIDAuNTAzNjA5MywtMC4zOTMxOTkxIDAuODExMzMwNiwtMC42MDE5MDkxIDAuODExMzMwNiwtMS4xNjYwNjQ4IDAsLTAuNDc4Njc4MSAtMC4yOTQ5LC0wLjc0ODY0NjcgLTAuODgzMjc0OCwtMC43NDg2NDY3IC0wLjUwMzYwOTQsMCAtMC45NDU5NTkxLDAuMTM0NjI4MSAtMS40MTE4MTUzLDAuNDU0NDU5MiBMIDYuODI3NDI5MSw1LjMwNzY5NzggQyA3LjQ0MDczNTMsNC44Nzc0NTc1IDguMjAyMjAzNiw0LjU3MTE2MDcgOS4yMDc5OTY5LDQuNTcxMTYwNyBjIDEuMzYxOTUzMSwwIDIuNTA0NTEyMSwwLjc0ODY0NjUgMi41MDQ1MTIxLDIuMTgzOTY4MiAtNy4xMmUtNCwxLjAxODYxNDkgLTAuNTY1NTgsMS41NTg1NTI1IC0xLjE5MTcwOSwyLjA0OTM0MTMgeiIKICAgaWQ9InBhdGgzIgogICBzdHlsZT0iZmlsbDojNTc1NzU3IiAvPgo8L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.23wmf4/extensions/UniversalLanguageSelector/resources/css/../images/help.svg?2013-11-14T18:13:20Z)!ie}.ime-checked .ime-perime-help:hover{opacity:1}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ea93267c4906696831f86bae78aec87c */
+#p-lang ul,.autonym{ font-family:'Autonym',sans-serif}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:5107124d6c4454dabb7fc6e4dcb24c3e */
+.wbc-editpage{list-style:none none;text-align:right;padding-right:.5em !important}.wbc-editpage > a{padding-left:11px;background:no-repeat left center}.wbc-editpage > a:link,.wbc-editpage > a:visited{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGIAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil.png?2013-11-14T18:15:00Z)!ie;color:#797979 !important}.wbc-editpage > a:hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZrtW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg==);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/Wikibase/client/resources/images/WBC-Asset-Pencil-Hover.png?2013-11-14T18:15:00Z)!ie;color:#0645AD !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:12a706c5a3716ed31f07360c556a3f3c */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3c614aa75cecefe56b27b5e3c9197b7e */
+div#editpage-specialchars{display:block;margin-top:.5em;border:1px solid #c0c0c0;padding:.3em}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:29386c84f9c8f19dfb410df7e5be154b */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ba4e3603af357b5172e85672664d39a8 */
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/resources/mediawiki.action/images/green-checkmark.png?2013-11-14T18:10:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6282247611d5f95fa0dbf2f6ce149283 */
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?2013-11-14T18:11:40Z)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?2013-11-14T18:11:40Z) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?2013-11-14T18:11:40Z);position :absolute;cursor :pointer;border :none !important;z-index :1}.play-btn-large:hover{background :url(//bits.wikimedia.org/static-1.23wmf4/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?2013-11-14T18:11:40Z)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;-webkit-border-radius:.5em;-moz-border-radius:.5em;border-radius:.5em;padding:2px 10px;background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) )}.alert-text{color :black !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:4246530442bfd8e2a81d76f365ae06f4 */
+.PopUpMediaTransform a .play-btn-large{position :absolute;top:50%;left :50%;width:70px;height:53px;margin-left:-35px;margin-top:-25px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABnlBMVEUAAAAAAAAAAABaWlp4eHh7e3t/f393d3eDg4N0dHRtbW2FhYVra2uJiYmNjY1nZ2eRkZFkZGSUlJRiYmKYmJhgYGCcnJxeXl5cXFyfn58AAACioqKlpaWsrKwAAACpqakAAAAAAAAAAAAAAABEREQFBQUHBwdMTEwAAAAYGBgAAAAAAAABAQEXFxcAAAAAAAAAAABxcXGoqKh3d3eampp8fHyIiIgUFBQcHBw0NDSFhYV+fn5FRUUmJiaNjY11dXWPj4+Hh4c9PT14eHifn59nZ2eBgYFISEiBgYFubm5vb28ODg4lJSVra2tiYmJoaGgEBAQmJiZmZmaLi4saGhpiYmKYmJhZWVlgYGBfX19vb29DQ0MGBgZcXFyBgYFKSkoPDw9ZWVlzc3NQUFBXV1eKiopUVFQdHR1VVVUQEBBYWFglJSVTU1NXV1cKCgosLCySkpJRUVFISEgyMjJPT08dHR2GhoY4ODhNTU09PT0MDAwuLi57e3sTExNJSUkgICBOTk4hISEbGxtTU1MoKChBQUEsLCxXV1cAAABycnIdNM6eAAAAinRSTlOzj6jO1dbX1NfU09nS2drR29Hc0N3Q3c/O3gDf3+Ce4EgIGW7HtbXKnLouq7S5cHIq1ODQ3NTXuLq/1tXEvNjT2NjC093N18bW0dC2vNHM0LW90Ne5z9rLzsrTxbXN1Me3zdDKzdfLu8y3zb3Lyba/2svFwcq618PKxLa/1LjJu8q8u8y+xsDKrdJqj5XQAAABYklEQVR4Xu3XVVNCQRjH4VdQEbvFVRAOIRl2d3d3d3d317d2GEaGOOfM1oUXPB/gN7NX/30BIYPeGMPAqDcgBMhrBUZWLwJBAcwcAriBAzfogAMdKIADBUUmmqm64JAxl2m1k/XMmZkin+YaxsxYqd9iA1OmsfDPajVDZqMgoL1jhzpTmR+k/OCQMlObG+L4dJgq050d5rKVJlOXGaHijjxzny6i94k005YqatBFlmlKEdfy1UeS+UmS0tllwc/0JEhT9WNnBuJlqCy4maE4OSO4mdFYOeO4mQm1jCnAzUyXSJqdm8fOLCRKWVomWIaVZHFrLqJlWE8Ts7lFuAzbGZF294iXYT8rnPLICcSZk5xQyjMzzTKc5wXTXFnoluFaE+TmlnYZipUBpgcA5syjjWU1Tf7I8wvbhr/6Im/vTmDLgO3D9Gn+R5+2aIbXzeABDjwgOIDZtwDIzvwsnR1xujV/AS6zSfMs2bS9AAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform a .play-btn-large :hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAMAAADLRm3ZAAABtlBMVEUAAAAAAAAAAAC5ubm1tbWwsLC+vr6Li4vExMSrq6umpqbIyMjOzs6ioqLT09OdnZ3Y2NiZmZnc3NyWlpbh4eGSkpLn5+eQkJCNjY0AAADr6+vv7+/z8/P39/cAAAD9/f0AAAAAAAAAAAAAAAB2dnYAAAAoKCj5+flra2sMDAwAAAAAAAAAAAAAAAAAAAACAgLW1tbPz88wMDCHh4fExMS8vLxKSkpubm6vr6+qqqo0NDQQEBDCwsK1tbUmJiaysrLT09PLy8uIiIgXFxetra2+vr7r6+tycnIbGxvMzMyTk5O1tbU8PDyjo6PR0dG0tLQLCwufn58HBwc9PT2bm5shISEqKiqXl5cICAiJiYmTk5Pj4+OoqKhpaWkKCgqOjo5TU1OXl5cYGBiKioo9PT18fHwlJSWGhoYuLi6CgoIvLy+Dg4Ofn5+oqKg7OzuAgIDk5OSLi4tHR0fIyMh9fX3Z2dlycnJPT08JCQl7e3vJyclhYWFZWVl4eHhhYWEUFBS6urpqamofHx9ycnK2trZzc3N6eno1NTUsLCyKioqAgIBBQUFmZmZHR0cICAjBwcEAAACIiIg+YVJpAAAAknRSTlOzj6jt6+ru4O/p5/Hy5vPl9eT24/ji+eHgAPr7/P2e/hlICG7YLr7+07accipwq7Tw777X6erGzuLjv7fs4rzn8PDYuObr+dK57tjqwuTu6rbjtcPiur3htdvg8+jRtt7H3Lndwdi83b7bwNze5cPb9t/G7drz0Mq22e7MzdjPuOrUu9fo1NnCwN/cxdLItu6t3VahkKcAAAFlSURBVHhe7dfFcgJBFIbRGyLEXegIDBAITtzd3d3d3d3d88ZJigqFzExNyyILzgN8Vb36+wJCGrXWj4JWrUEIkMUElEwWBJwMqNk4sAIDVlACA0qQAQMygowv05fNIDNYplKNFFBnmjN+ZU5SZtrTHHJnqTKVqX8KFykyWSlO9auNxJmmZBebOSWEmZ1EN3v73USZ0ngPxyckmbpYL3n5+JnLaB5FxbiZ20heU+V4mYpwflXVNTiZ2jAhHw1G6Zm1YGEtrZIzbUEiOjqlZrr8xfRIzfQGiOmXmhkIFDEEUjPDIYJGx8YlZyZChdxNYyzDTAS/uXmsZViI4rO0jLkMKzHevtaxl2EjztPWth2wM7sJ7uQHhyTLcJTkSnFqJFuGM4WL8wvSZUiXO11dA1BnbvQ0q2lwRO4f6Db88ekn8vxiB7oM6F8Nb+//6NPmy7C6GczAgBk4G1D75ADpqJ+l1CFGt+Y3XGRJEJqP8KwAAAAASUVORK5CYII=);background-image:url(//bits.wikimedia.org/static-1.23wmf4/extensions/TimedMediaHandler/resources/player_big_play_button_hover.png?2013-11-14T18:13:20Z)!ie}.PopUpMediaTransform{position :relative;display:inline-block}li.gallerybox div.thumb div.PopUpMediaTransform{margin:0 auto}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:1d9d796e8f6ec57bd5c8b8c44f680f32 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=site&only=styles&skin=vector&*">
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0de201fdea5d684523607ed88007b127 */</style>
+
+<script src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/load.php"></script><style type="text/css"></style><script src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/load(1).php"></script><style title="spinjs"></style>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Longest_common_substring_problem","wgTitle":"Longest common substring problem","wgCurRevisionId":572893194,"wgRevisionId":572893194,"wgArticleId":2167401,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Problems on strings","Dynamic programming"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Longest_common_substring_problem","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false,"aft-noone":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.23wmf4/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr"},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us","en"],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","aftv5Article":{"id":2167401,"title":"Longest common substring problem","namespace":0,"categories":["Dynamic programming","Problems on strings"],"permissionLevel":false},"wgWikibaseItemId":"Q1936797"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots"
+:0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"aftv5-last-filter":null,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-mwmath":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,
+"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs446":false,"searchNs447":false
+,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:664b3f39123c8f67ad841d996d382105 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.wikimediaShopLink.core","ext.uls.init","ext.uls.interface","wikibase.client.init","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script><script src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/load(2).php"></script>
+<script src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/geoiplookup"></script><link rel="dns-prefetch" href="http://meta.wikimedia.org/"><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.23wmf4/skins/vector/csshover.min.htc")}</style><![endif]--><style>@font-face { font-family: 'Autonym';
+	src: url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.eot?version=20131112');
+	src: local('Autonym'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.woff?version=20131112') format('woff'),		url('https://bits.wikimedia.org/static-current/extensions/UniversalLanguageSelector/data/fontrepo/fonts/Autonym/Autonym.ttf?version=20131112') format('truetype');
+	font-style: normal;}
+</style><script async="" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/load(3).php"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Longest_common_substring_problem skin-vector action-view vector-animateLayout hasGoogleVoiceExt" style=""><div id="centralNotice" class="cn-fundraising">
+
+<style>
+  #centralNotice.collapsed #B13_1203_twin1_enYY{
+    display: none;
+  }
+  div#B13_1203_twin1_enYY {
+    background: transparent;
+    display: none;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  #B13_1203_twin1_enYY-form-wrapper {
+    background: #f5faff;
+    padding: 4px 8px;
+    border-left: 1px solid #96a0aa;
+  }
+  #B13_1203_twin1_enYY-form {
+    height: 100%;
+  }
+  #B13_1203_twin1_enYY-form table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  #B13_1203_twin1_enYY-form td {
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 55px;
+    white-space: nowrap;
+    margin: 0;
+    vertical-align: middle;
+    padding: 2px;
+  }
+  #B13_1203_twin1_enYY-form span label {
+    margin-left: 2px;
+  }
+  #B13_1203_twin1_enYY-form .amount-options {
+    height: 20%;
+  }
+  #B13_1203_twin1_enYY-form .paymentmethod-options td {
+    text-align: center;
+    padding: 4px 4px 8px 4px;
+  }
+  #B13_1203_twin1_enYY-form button {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    min-width: 90px;
+    border: 3px double #ddd;
+    border-radius: 8px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,rgb(240, 240, 240) 100%);
+    box-shadow: 0 1px 1px #ddd;
+    margin: 0 1px;
+  }
+  #B13_1203_twin1_enYY-form button:hover {
+    color: #0645ad;
+  }
+  div#B13_1203_twin1_enYY #B13_1203_twin1_enYY-facts {
+    background: #cedff1 url(//upload.wikimedia.org/wikipedia/donate/3/37/Information-icon-yellow.png) no-repeat 10px 8px;
+    min-height: 65px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    box-shadow: 0 3px 5px #fff64c;
+  }
+  div#B13_1203_twin1_enYY #B13_1203_twin1_enYY-facts p {
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0;
+    padding: 10px 10px 10px 40px;
+    text-align: justify;
+  }
+
+  div#B13_1203_twin1_enYY p#B13_1203_twin1_enYY-legal {
+    position: relative;
+    margin: 0;
+    padding: 10px 40px 10px 40px;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: normal;
+    z-index: -10;
+    background: #cedff1;
+    top: -100px;
+  }
+
+  #B13_1203_twin1_enYY-close-wrapper {
+    width: 20px;
+  }
+
+  div#B13_1203_twin1_enYY span#B13_1203_twin1_enYY-close {
+    background: url(//upload.wikimedia.org/wikipedia/donate/2/27/Small-white-close.png) no-repeat center center;
+    background-color: black;
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 21px;
+  }
+  div#B13_1203_twin1_enYY #B13_1203_twin1_enYY-facts p b {
+    background: #fff64c;
+    color: black;
+    padding: 1px 0.5em;
+  }
+</style>
+
+<div id="B13_1203_twin1_enYY" style="display: block;">
+  <table id="B13_1203_twin1_enYY-facts" style="height: 100%;">
+    <tbody><tr>
+      <td>
+        <p>
+          <i>DEAR WIKIPEDIA READERS:</i> We are the small non-profit that runs the #5 website in the world. We have only 175 staff but serve 500 million users, and have costs like any other top site: servers, power, programs, and staff. <b>To protect our independence, we'll never run ads. We take no government funds. We survive on donations averaging about $15.</b> Now is the time we ask. If everyone reading this gave $3, our fundraiser would be done within an hour. Wikipedia is something special. It is like a library or a public park. It is like a temple for the mind, a place we can all go to think and learn. If Wikipedia is useful to you, take one minute to keep it online and ad-free another year. Please help us forget fundraising and get back to Wikipedia. <i>Thank you.</i>
+        </p>
+      </td>
+
+      <td id="B13_1203_twin1_enYY-form-wrapper">       
+        <form id="B13_1203_twin1_enYY-form" method="post" name="paypalcontribution" style="height: 158px;">
+          <input type="hidden" name="payment_method" value="">
+          <input type="hidden" name="utm_source" value="B13_1203_twin1_enYY">
+          <input type="hidden" name="utm_medium" value="sitenotice">
+          <input type="hidden" name="utm_campaign" value="C13_wpdr_enWWform2_FR">
+          <input type="hidden" name="language" value="en">
+          <input type="hidden" name="referrer" value="">
+          <input type="hidden" name="country" value="US">
+          <input type="hidden" name="returnto" value="">
+          <input type="hidden" name="currency_code" id="input_currency_code" value="USD">
+          <table>
+            <tbody><tr class="frequency-options">
+              <td colspan="2"><input type="radio" name="frequency" id="frequency_onetime" onclick="toggleMonthly(false);" value="onetime" checked="true"><label for="frequency_onetime">One-time</label></td>
+              <td colspan="2"><input type="radio" name="frequency" id="frequency_monthly" onclick="toggleMonthly(true);" value="monthly"><label for="frequency_monthly">Monthly*</label></td>
+            </tr>
+            <tr class="amount-options">
+              <td><input type="radio" name="amount" id="input_amount_0" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="3"><label for="input_amount_0">$3</label></td>
+              <td><input type="radio" name="amount" id="input_amount_1" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="5"><label for="input_amount_1">$5</label></td>
+              <td><input type="radio" name="amount" id="input_amount_2" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="10"><label for="input_amount_2">$10</label></td>
+              <td><input type="radio" name="amount" id="input_amount_3" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="20"><label for="input_amount_3">$20</label></td>
+            </tr>
+            <tr class="amount-options">
+              <td><input type="radio" name="amount" id="input_amount_4" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="30"><label for="input_amount_4">$30</label></td>
+              <td><input type="radio" name="amount" id="input_amount_5" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="50"><label for="input_amount_5">$50</label></td>
+              <td><input type="radio" name="amount" id="input_amount_6" onclick="document.paypalcontribution.amountGiven.value=&#39;&#39;" value="100"><label for="input_amount_6">$100</label></td>
+              <td>
+                <input type="radio" name="amount" id="input_amount_other" value="Other"><label for="input_amount_other">$</label>
+                <input style="height: 1em;" type="text" placeholder="" name="amountGiven" size="3" autocomplete="off" onfocus="this.form.input_amount_other.checked=true;"></td>
+            </tr>
+            <tr class="paymentmethod-options">
+              <td colspan="4">
+                <button class="paymentmethod-cc" onclick="redirectPayment(&#39;cc&#39;); return false;">Credit Card</button>
+                <button class="paymentmethod-pp" onclick="redirectPayment(&#39;paypal&#39;); return false;">PayPal</button>
+                <button class="paymentmethod-amazon no-monthly" onclick="redirectPayment(&#39;amazon&#39;); return false;" style="">Amazon</button>
+                
+              </td>
+            </tr>
+          </tbody></table>
+        <input type="hidden" name="utm_key" value="3"></form>
+      </td>
+
+      <td id="B13_1203_twin1_enYY-close-wrapper">
+        <span id="B13_1203_twin1_enYY-close">&nbsp;</span>
+      </td>
+
+    </tr>
+  </tbody></table>
+
+  <p id="B13_1203_twin1_enYY-legal" style="top: -100px;">
+    <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&landing_page=Problems_donating&country=US&language=en&uselang=en">Problems donating?</a> | 
+    <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&landing_page=Ways_to_Give&country=US&language=en&uselang=en">Other ways to give</a> | 
+    <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?landing_page=FAQ&basic=true&country=US&language=en&uselang=en">Frequently asked questions</a> | 
+    <span class="informationsharing-US" style="">
+By donating, you are agreeing to our <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&landing_page=Donor_policy&country=US&language=en&uselang=en">donor privacy policy</a>. The Wikimedia Foundation is a nonprofit, <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Tax_Deductibility/en?country=US&language=en&uselang=en">tax-exempt organization</a>.
+</span>
+<span class="informationsharing-nonUS" style="display: none;">
+By donating, you are agreeing to our <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&landing_page=Donor_policy&country=US&language=en&uselang=en">donor privacy policy</a> and to sharing your information with the <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?basic=true&landing_page=Tax_Deductibility&country=US&language=en&uselang=en">Wikimedia Foundation</a> and its service providers in the U.S. and elsewhere.
+</span> *Monthly payments will be debited by the Wikimedia Foundation until you notify us to stop. We'll send you an email receipt for each payment, which will include a link to <a class="localize" target="_blank" href="https://wikimediafoundation.org/wiki/Special:LandingCheck?landing_page=Cancel_or_change_recurring_payments&basic=true&country=US&language=en&uselang=en">easy cancellation instructions.</a>
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+		<div id="mw-page-base" class="noprint" style="padding-top: 219px;"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Longest common substring problem</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#mw-navigation">navigation</a>, 					<a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="dablink">Not to be confused with <a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem" title="Longest common subsequence problem">longest common subsequence problem</a>.</div>
+<p>In <a href="http://en.wikipedia.org/wiki/Computer_science" title="Computer science">computer science</a>, the <b>longest common substring problem</b> is to find the longest <a href="http://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">string</a> (or strings) that is a <a href="http://en.wikipedia.org/wiki/Substring" title="Substring">substring</a> (or are substrings) of two or more strings. Note that subsequence is different from a substring (see <a href="http://en.wikipedia.org/wiki/Subsequence#Substring_vs._subsequence" title="Subsequence">substring vs. subsequence</a>) and this should not be confused with the <a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem" title="Longest common subsequence problem">longest common subsequence problem</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#Problem_definition"><span class="tocnumber">2</span> <span class="toctext">Problem definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#Algorithms"><span class="tocnumber">3</span> <span class="toctext">Algorithms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#Suffix_tree"><span class="tocnumber">3.1</span> <span class="toctext">Suffix tree</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#Dynamic_programming"><span class="tocnumber">3.2</span> <span class="toctext">Dynamic programming</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#Pseudocode"><span class="tocnumber">4</span> <span class="toctext">Pseudocode</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The longest common substring of the strings "ABABC", "BABCA" and "ABCBA" is string "ABC" of length 3. Other common substrings are "AB", "BC" and "BA".</p>
+<pre>  ABABC
+    |||
+   BABCA
+    |||
+    ABCBA
+</pre>
+<h2><span class="mw-headline" id="Problem_definition">Problem definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=2" title="Edit section: Problem definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Given two strings, <img class="tex" alt="S" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/5dbc98dcc983a70728bd082d1a47546e.png"> of length <img class="tex" alt="m" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/6f8f57715090da2632453988d9a1501b.png"> and <img class="tex" alt="T" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/b9ece18c950afbfa6b0fdbfa4ff731d3.png"> of length <img class="tex" alt="n" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/7b8b965ad4bca0e41ab51de7b31363a1.png">, find the longest strings which are substrings of both <img class="tex" alt="S" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/5dbc98dcc983a70728bd082d1a47546e.png"> and <img class="tex" alt="T" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/b9ece18c950afbfa6b0fdbfa4ff731d3.png">.</p>
+<p>A generalisation is the <b>k-common substring problem</b>. Given the set of strings <img class="tex" alt="S = \{S_1, ..., S_K\}" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/09d30fbe19dbd5287ff005f14e1c4f8d.png">, where <img class="tex" alt="|S_i|=n_i" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/680582c5482d7702bb8f3824d40832ac.png"> and <img class="tex" alt="\Sigma n_i = N" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/c3aa0811810a30c8f0eb377d45b63088.png">. Find for each <img class="tex" alt="2 \leq k \leq K" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/4119e5e4f0ff0f8164c1d0f0167f6c9f.png">, the longest strings which occur as substrings of at least <img class="tex" alt="k" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/8ce4b16b22b58894aa86c421e8759df3.png"> strings.</p>
+<h2><span class="mw-headline" id="Algorithms">Algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=3" title="Edit section: Algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>One can find the lengths and starting positions of the longest common substrings of <img class="tex" alt="S" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/5dbc98dcc983a70728bd082d1a47546e.png"> and <img class="tex" alt="T" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/b9ece18c950afbfa6b0fdbfa4ff731d3.png"> in <img class="tex" alt="\Theta(n+m)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/5e815c8c7434d05ee26b80ac38d5c11b.png"> with the help of a <a href="http://en.wikipedia.org/wiki/Generalised_suffix_tree" title="Generalised suffix tree" class="mw-redirect">generalised suffix tree</a>. Finding them by <a href="http://en.wikipedia.org/wiki/Dynamic_programming" title="Dynamic programming">dynamic programming</a> costs <img class="tex" alt="\Theta(nm)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/118a7f92d5c68d0d212103d2369d315f.png">. The solutions to the generalised problem take <img class="tex" alt="\Theta(n_1 + ... + n_K)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/74aea82168c365050e3cefedc6e1a831.png"> space and <img class="tex" alt="\Theta(n_1" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/0659d80d2585d860b543814538ac1eac.png">·...·<img class="tex" alt="n_K)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/66f6cfb11c1d814afcff95f3c3142131.png"> time.</p>
+<h3><span class="mw-headline" id="Suffix_tree">Suffix tree</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=4" title="Edit section: Suffix tree">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:402px;"><a href="http://en.wikipedia.org/wiki/File:Suffix_tree_ABAB_BABA_ABBA.svg" class="image"><img alt="" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/400px-Suffix_tree_ABAB_BABA_ABBA.svg.png" width="400" height="318" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Suffix_tree_ABAB_BABA_ABBA.svg/600px-Suffix_tree_ABAB_BABA_ABBA.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Suffix_tree_ABAB_BABA_ABBA.svg/800px-Suffix_tree_ABAB_BABA_ABBA.svg.png 2x"></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="http://en.wikipedia.org/wiki/File:Suffix_tree_ABAB_BABA_ABBA.svg" class="internal" title="Enlarge"><img src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/magnify-clip.png" width="15" height="11" alt=""></a></div>
+<a href="http://en.wikipedia.org/wiki/Generalised_suffix_tree" title="Generalised suffix tree" class="mw-redirect">Generalised suffix tree</a> for the strings "ABAB", "BABA" and "ABBA", numbered 0, 1 and 2.</div>
+</div>
+</div>
+<p>The longest common substrings of a set of strings can be found by building a <a href="http://en.wikipedia.org/wiki/Generalised_suffix_tree" title="Generalised suffix tree" class="mw-redirect">generalised suffix tree</a> for the strings, and then finding the deepest internal nodes which have leaf nodes from all the strings in the subtree below it. The figure on the right is the suffix tree for the strings "ABAB", "BABA" and "ABBA", padded with unique string terminators, to become "ABAB$0", "BABA$1" and "ABBA$2". The nodes representing "A", "B", "AB" and "BA" all have descendant leaves from all of the strings, numbered 0, 1 and 2.</p>
+<p>Building the suffix tree takes <img class="tex" alt="\Theta(N)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/c7e795bbc8e51db680d5f236abc18853.png"> time (if the size of the alphabet is constant). If the tree is traversed from the bottom up with a bit vector telling which strings are seen below each node, the k-common substring problem can be solved in <img class="tex" alt="\Theta(NK)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/d997710ec89d3f8167ff9aeac653c0fe.png"> time. If the suffix tree is prepared for constant time <a href="http://en.wikipedia.org/wiki/Lowest_common_ancestor" title="Lowest common ancestor">lowest common ancestor</a> retrieval, it can be solved in <img class="tex" alt="\Theta(N)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/c7e795bbc8e51db680d5f236abc18853.png"> time.<sup id="cite_ref-Gus97_1-0" class="reference"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#cite_note-Gus97-1"><span>[</span>1<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Dynamic_programming"><a href="http://en.wikipedia.org/wiki/Dynamic_programming" title="Dynamic programming">Dynamic programming</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=5" title="Edit section: Dynamic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>First find the longest common <a href="http://en.wikipedia.org/wiki/Substring#Suffix" title="Substring">suffix</a> for all pairs of <a href="http://en.wikipedia.org/wiki/Substring#Prefix" title="Substring">prefixes</a> of the strings. The longest common suffix is</p>
+<p><img class="tex" alt="
+\mathit{LCSuff}(S_{1..p}, T_{1..q}) =
+\begin{cases}
+       \mathit{LCSuff}(S_{1..p-1}, T_{1..q-1}) + 1  &amp; \mathrm{if } \; S[p] = T[q] \\
+       0                                            &amp; \mathrm{otherwise}.
+\end{cases}
+" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/9e67c58c4ce77962bd00b844a3f9edaf.png"></p>
+<p>For the example strings "ABAB" and "BABA":</p>
+<table class="wikitable" style="text-align:center">
+<tbody><tr>
+<th width="15"></th>
+<th width="15"></th>
+<th width="15">A</th>
+<th width="15">B</th>
+<th width="15">A</th>
+<th width="15">B</th>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>B</th>
+<td>0</td>
+<td>0</td>
+<td style="color:red">1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<th>A</th>
+<td>0</td>
+<td style="color:red">1</td>
+<td>0</td>
+<td style="color:red">2</td>
+<td>0</td>
+</tr>
+<tr>
+<th>B</th>
+<td>0</td>
+<td>0</td>
+<td style="color:red">2</td>
+<td>0</td>
+<td style="color:red">3</td>
+</tr>
+<tr>
+<th>A</th>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td style="color:red">3</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>The maximal of these longest common suffixes of possible prefixes must be the longest common substrings of <i>S</i> and <i>T</i>. These are shown on diagonals, in red, in the table. For this example, the longest common substrings are "BAB" and "ABA".</p>
+<dl>
+<dd><img class="tex" alt="
+\mathit{LCSubstr}(S, T) = \max_{1 \leq i \leq m, 1 \leq j \leq n} \mathit{LCSuff}(S_{1..i}, T_{1..j}) \;
+" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/3709f30af40fe9180fbe2c8230a9486d.png"></dd>
+</dl>
+<p>This can be extended to more than two strings by adding more dimensions to the table.</p>
+<h2><span class="mw-headline" id="Pseudocode">Pseudocode</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=6" title="Edit section: Pseudocode">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="metadata mbox-small plainlinks" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x"></td>
+<td class="mbox-text plainlist" style="">The Wikibook <i><a href="http://en.wikibooks.org/wiki/Algorithm_implementation" class="extiw" title="wikibooks:Algorithm implementation">Algorithm implementation</a></i> has a page on the topic of: <i><b><a href="http://en.wikibooks.org/wiki/Algorithm_implementation/Strings/Longest_common_substring" class="extiw" title="wikibooks:Algorithm implementation/Strings/Longest common substring">Longest common substring</a></b></i></td>
+</tr>
+</tbody></table>
+<p>The following pseudocode finds the set of longest common substrings between two strings with dynamic programming:</p>
+<pre><b>function</b> LCSubstr(S[1..m], T[1..n])
+    L := <b>array</b>(1..m, 1..n)
+    z := 0
+    ret := {}
+    <b>for</b> i := 1..m
+        <b>for</b> j := 1..n
+            <b>if</b> S[i] == T[j]
+                <b>if</b> i == 1 or j == 1
+                    L[i,j] := 1
+                <b>else</b>
+                    L[i,j] := L[i-1,j-1] + 1
+                <b>if</b> L[i,j] &gt; z
+                    z := L[i,j]
+                    ret := {S[i-z+1..i]}
+                <b>elif</b> L[i,j] == z
+                    ret := ret ∪ {S[i-z+1..i]}
+            <b>else</b> L[i,j]=0;
+    <b>return</b> ret
+</pre>
+<p>This algorithm runs in <img class="tex" alt="O(n m)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/f168ecb8ea82616ea66627b6dcc574fc.png"> time. The variable <code>z</code> is used to hold the length of the longest common substring found so far. The set <code>ret</code> is used to hold the set of strings which are of length <code>z</code>. The set <code>ret</code> can be saved efficiently by just storing the index <code>i</code>, which is the last character of the longest common substring (of size z) instead of <code>S[i-z+1..z]</code>. Thus all the longest common substrings would be, for each i in <code>ret</code>, <code>S[(ret[i]-z)..(ret[i])]</code>.</p>
+<p>The following tricks can be used to reduce the memory usage of an implementation:</p>
+<ul>
+<li>Keep only the last and current row of the DP table to save memory (<img class="tex" alt="O(\min(m, n))" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/c90446fd26100d6942dd5905ee5f9558.png"> instead of <img class="tex" alt="O(n m)" src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/f168ecb8ea82616ea66627b6dcc574fc.png">)</li>
+<li>Store only non-zero values in the rows. This can be done using hash tables instead of arrays. This is useful for large alphabets.</li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Longest_palindromic_substring" title="Longest palindromic substring">Longest palindromic substring</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol class="references">
+<li id="cite_note-Gus97-1"><span class="mw-cite-backlink"><b><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#cite_ref-Gus97_1-0">^</a></b></span> <span class="reference-text"><span class="citation book">Gusfield, Dan (1999) [1997]. <i>Algorithms on Strings, Trees and Sequences: Computer Science and Computational Biology</i>. USA: Cambridge University Press. <a href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="http://en.wikipedia.org/wiki/Special:BookSources/0-521-58519-8" title="Special:BookSources/0-521-58519-8">0-521-58519-8</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALongest+common+substring+problem&amp;rft.aufirst=Dan&amp;rft.au=Gusfield%2C+Dan&amp;rft.aulast=Gusfield&amp;rft.btitle=Algorithms+on+Strings%2C+Trees+and+Sequences%3A+Computer+Science+and+Computational+Biology&amp;rft.date=1999&amp;rft.genre=book&amp;rft.isbn=0-521-58519-8&amp;rft.place=USA&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+</ol>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit&section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://nist.gov/dads/HTML/longestCommonSubstring.html">Dictionary of Algorithms and Data Structures: longest common substring</a></li>
+<li><a rel="nofollow" class="external text" href="http://metacpan.org/module/String::LCSS_XS">Perl/XS implementation of the dynamic programming algorithm</a></li>
+<li><a rel="nofollow" class="external text" href="http://metacpan.org/module/Tree::Suffix">Perl/XS implementation of the suffix tree algorithm</a></li>
+<li><a class="external text" href="http://en.wikibooks.org/wiki/Algorithm_implementation/Strings/Longest_common_substring">Dynamic programming implementations in various languages on wikibooks</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.emanueleferonato.com/2010/12/01/solving-the-longest-common-substring-problem-with-as3/">working AS3 implementation of the dynamic programming algorithm</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1219
+CPU time usage: 0.208 seconds
+Real time usage: 0.350 seconds
+Preprocessor visited node count: 435/1000000
+Preprocessor generated node count: 1867/1500000
+Post‐expand include size: 3605/2048000 bytes
+Template argument size: 891/2048000 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 0/500
+Lua time usage: 0.011s
+Lua memory usage: 821 KB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2167401-0!0!0!!en!4!* and timestamp 20131113154947
+ -->
+<noscript>&lt;img src="//en.wikipedia.org/w/index.php?title=Special:CentralAutoLogin/start&amp;amp;type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /&gt;</noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&oldid=572893194">http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&amp;oldid=572893194</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Problems_on_strings" title="Category:Problems on strings">Problems on strings</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Dynamic_programming" title="Category:Dynamic programming">Dynamic programming</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head" style="top: 219px;">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Longest+common+substring+problem&type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Longest+common+substring+problem" title="You&#39;re encouraged to log in; however, it&#39;s not mandatory. [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="./Longest common substring problem - Wikipedia, the free encyclopedia_files/Longest common substring problem - Wikipedia, the free encyclopedia.htm" title="View the content page [alt-shift-c]" accesskey="c">Article</a></span></li>
+					<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:Longest_common_substring_problem" title="Discussion about the content page [alt-shift-t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="./Longest common substring problem - Wikipedia, the free encyclopedia_files/Longest common substring problem - Wikipedia, the free encyclopedia.htm">Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=edit" title="You can edit this page. 
+Please review your changes before saving. [alt-shift-e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikipedia [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off">						<button type="submit" name="button" title="Search Wikipedia for this text" id="searchButton"><img src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/search-ltr.png" alt="Search" width="12" height="13"></button>								<input type="hidden" name="title" value="Special:Search">
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav" style="top: 379px;">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&utm_medium=sidebar&utm_campaign=C13_en.wikipedia.org&uselang=en" title="Support us">Donate to Wikipedia</a></li>
+		<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li></ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+	<h3 id="p-interaction-label" tabindex="2"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" aria-haspopup="true" aria-controls="p-interaction-list" role="button" aria-pressed="true" aria-expanded="true">Interaction</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-interaction-list">
+			<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="3"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" aria-haspopup="true" aria-controls="p-tb-list" role="button" aria-pressed="false" aria-expanded="false">Tools</a></h3>
+	<div class="body">
+		<ul id="p-tb-list">
+			<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Longest_common_substring_problem" title="List of all English Wikipedia pages containing links to this page [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Longest_common_substring_problem" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&oldid=572893194" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q1936797" title="Link to connected data repository item">Data item</a></li>
+<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&page=Longest_common_substring_problem&id=572893194" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal collapsed" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+	<h3 id="p-coll-print_export-label" tabindex="4"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" aria-haspopup="true" aria-controls="p-coll-print_export-list" role="button" aria-pressed="false" aria-expanded="false">Print/export</a></h3>
+	<div class="body">
+		<ul id="p-coll-print_export-list">
+			<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Longest+common+substring+problem">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Longest+common+substring+problem&oldid=572893194&writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Longest_common_substring_problem&printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span class="uls-settings-trigger" tabindex="0" role="button" aria-haspopup="true" original-title="Language settings"></span>
+	<h3 id="p-lang-label" tabindex="5"><a href="http://en.wikipedia.org/wiki/Longest_common_substring_problem#" aria-haspopup="true" aria-controls="p-lang-list" role="button" aria-pressed="true" aria-expanded="true">Languages</a></h3>
+	<div class="body" style="display: block;">
+		<ul id="p-lang-list">
+			<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%A8%D8%B2%D8%B1%DA%AF%D8%AA%D8%B1%DB%8C%D9%86_%D8%B2%DB%8C%D8%B1%D8%B1%D8%B4%D8%AA%D9%87_%D9%85%D8%B4%D8%AA%D8%B1%DA%A9" title="بزرگترین زیررشته مشترک – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+			<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Najd%C5%82u%C5%BCszy_wsp%C3%B3lny_pod%C5%82a%C5%84cuch" title="Najdłuższy wspólny podłańcuch – Polish" lang="pl" hreflang="pl">Polski</a></li>
+			<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B8%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D0%BE%D0%B1%D1%89%D0%B0%D1%8F_%D0%BF%D0%BE%D0%B4%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0" title="Наибольшая общая подстрока – Russian" lang="ru" hreflang="ru">Русский</a></li>
+			<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/B%C3%A0i_to%C3%A1n_x%C3%A2u_con_chung_d%C3%A0i_nh%E1%BA%A5t" title="Bài toán xâu con chung dài nhất – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+			
+			<li class="wbc-editpage"><a href="http://www.wikidata.org/wiki/Q1936797#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 14 September 2013 at 15:04.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br>
+Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=Longest_common_substring_problem&title=Longest_common_substring_problem" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.articleFeedbackv5.startup","ext.wikimediaEvents.moduleStorage","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="./Longest common substring problem - Wikipedia, the free encyclopedia_files/load(4).php"></script>
+<!-- Served by mw1056 in 0.148 secs. -->
+	
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
